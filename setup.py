@@ -61,7 +61,7 @@ class CMakeBuild(build_ext.build_ext):
             "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=%s" % output_path,
         ]
 
-        build_cmd = ["cmake", "--build", ".", "--parallel"]
+        build_cmd = [["cmake", "--build", "."] # "cmake", "--build", ".", "--parallel"]
         install_cmd = build_cmd + ["--target", "install"]
 
         try:
